@@ -2,12 +2,12 @@ import csv
 dataset1=[]
 dataset2=[]
 
-with open('dwarf_stars.csv.csv','r') as f:
+with open('dwarf_stars.csv','r') as f:
     csvreader=csv.reader(f)
     for row in csvreader:
         dataset1.append(row)
 
-with open('browndwarfs_sorted.csv.csv','r') as f:
+with open('browndwarfs_sorted.csv','r') as f:
     read=csv.reader(f)
     for row in read:
         dataset2.append(row)
@@ -24,13 +24,9 @@ star_data=[]
 for index,row in enumerate(star_data1):
     star_data.append(star_data1[index]+star_data2[index])
 
-#with open('archives_dataset_sorted.csv') as input,open("archives_data1.sorted.csv",'w',newline='') as output:
-  #  write=csv.writer(output)
-   # for row in csv.reader(input):
-   #     if any(field.strip() for field in row):
-   #         write.writerow(row)
 
-with open("merged.csv",'a+') as f:
+
+with open("merged1.csv",'a+') as f:
     csvWriter=csv.writer(f)
     csvWriter.writerow(headers)
     csvWriter.writerows(star_data)
