@@ -4,7 +4,8 @@ with open('dwarf_stars.csv','r') as f:
     read=csv.reader(f)
     for i in read:
         data.append(i)
-
+nan = f
+f= f.dropna()
 f=f[f['column_name'].notna()]
 mass=f["mass"].float()
 radius=f["radius"].float()

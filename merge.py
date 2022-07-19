@@ -21,9 +21,6 @@ star_data2=dataset2[1:]
 headers=headers_1+headers_2
 star_data=[]
 
-for index,row in enumerate(star_data1):
-    star_data.append(star_data1[index]+star_data2[index])
-
 
 
 with open("merged1.csv",'a+') as f:
