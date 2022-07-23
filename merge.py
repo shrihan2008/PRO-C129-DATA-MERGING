@@ -22,8 +22,10 @@ headers=headers_1+headers_2
 star_data=[]
 
 
-for index,row in enumerate(star_data1):
-    star_data.append(star_data1[index]+star_data2[index])
+for i in star_data1: 
+   star_data.append(i) 
+for j in star_data2: 
+    star_data2.append(j)
 
 
 with open("merged1.csv",'a+') as f:
