@@ -6,7 +6,9 @@ with open('dwarf_stars.csv','r') as f:
         data.append(i)
 nan = f
 f= f.dropna()
-f=f[f['column_name'].notna()]
+f=f[f['Radius'].notna()]
+f=f[f['Mass'].notna()]
+f=f[f['Distance'].notna()]
 mass=f["mass"].float()
 radius=f["radius"].float()
 radius=radius*0.102763
