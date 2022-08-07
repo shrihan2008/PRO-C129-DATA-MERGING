@@ -4,16 +4,15 @@ with open('dwarf_stars.csv','r') as f:
     read=csv.reader(f)
     for i in read:
         data.append(i)
-nan = f
-f= f.dropna()
-f=f[f['Radius'].notna()]
-f=f[f['Mass'].notna()]
-f=f[f['Distance'].notna()]
-mass=f["mass"].float()
-radius=f["radius"].float()
+
+mass=f["Mass"]
+mass=float(mass)
+radius=f["Radius"]
+radius=float(radius)
 radius=radius*0.102763
 mass=mass*0.000954588
 
+f=f.dropna()
 
 headers=data[0]
 
